@@ -98,9 +98,9 @@ class User private constructor(
     }
 
     fun checkPhoneNumber(phoneNumber: String) {
-        if (phoneNumber.first().equals("+")) throw IllegalArgumentException("phone number must start with +")
-        if (phoneNumber.length !== 12) throw IllegalArgumentException("the lenght phone number<>11")
-        if (!phoneNumber.substringAfter("+").matches("""[0-9]+""".toRegex())) throw IllegalArgumentException("phone number must contains only digits")
+        if (phoneNumber.first().equals("+")) throw IllegalArgumentException("Enter a valid phone number starting with a + and containing 11 digits")
+        if (phoneNumber.length !== 12) throw IllegalArgumentException("Enter a valid phone number starting with a + and containing 11 digits")
+        if (!phoneNumber.substringAfter("+").matches("""[0-9]+""".toRegex())) throw IllegalArgumentException("Enter a valid phone number starting with a + and containing 11 digits")
     }
 
     fun checkPassword(pass: String) = encrypt(pass) == passwordHash.also {
