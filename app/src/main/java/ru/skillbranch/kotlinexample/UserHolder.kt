@@ -43,7 +43,6 @@ object UserHolder {
     {
         val user:User? = map[phone]
         user?.changeAccessCode()
-
     }
 
     @VisibleForTesting(otherwise = VisibleForTesting.NONE)
